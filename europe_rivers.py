@@ -1,4 +1,5 @@
 import os
+import geopandas
 import glob
 import dload
 
@@ -15,4 +16,8 @@ def load(url,filename,path=path):
 address = r"https://data.hydrosheds.org/file/HydroRIVERS/HydroRIVERS_v10_eu_shp.zip"
 name = r"HydroRIVERS_v10_eu_shp.zip"
 load(address,name)
-list
+a = list[0]
+table = geopandas.read_file(a)
+df = geopandas.GeoDataFrame(table)
+df
+
